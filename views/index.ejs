@@ -13,8 +13,8 @@
     <div class="row input-line" id="templatenya">
         <div class="col-xxl-1 card-option vaksinpilihan1">
             <select class="form-control" name="vaksinpilihan1">
-                <option value="cert" selected >Cert</option>
-                <option value="peta">Peta</option>
+                <option value="vaksin1" selected >Vaksin 1</option>
+                <option value="vaksin2">Vaksin 2</option>
             </select>
         </div>
         <div class="col align-self-center vaksin_1"><input type="file" name="vaksinfile1" class="form-control" accept="image/*"></div>
@@ -78,7 +78,7 @@
                 vaksin2_elements.forEach(element => {
                     element.classList.remove("hide")
                 })
-                
+
                 vaksin1pilihan_element.forEach(element => {
                     element.classList.add("hide")
                 })
