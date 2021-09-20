@@ -26,10 +26,10 @@
   height: 9.1mm;
   width: 9.1mm;
   margin-top: 60.1px;
-  margin-left: 205px;
+  margin-left: 202px;
 }
 
-img.qrcode {
+div.qrcode {
   object-fit: fill;
 }
 
