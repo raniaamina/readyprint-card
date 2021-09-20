@@ -11,12 +11,12 @@
 
 <body>
     <div class="row input-line" id="templatenya">
-        <!-- <div class="col-xxl-1 card-option">
+        <div class="col-xxl-1 card-option vaksinpilihan1">
             <select class="form-control" name="vaksinpilihan1">
                 <option value="cert" selected >Cert</option>
                 <option value="peta">Peta</option>
             </select>
-        </div> -->
+        </div>
         <div class="col align-self-center vaksin_1"><input type="file" name="vaksinfile1" class="form-control" accept="image/*"></div>
         
         <!-- <div class="col-xxl-1 card-option vaksin-2 hide">
@@ -63,15 +63,25 @@
         document.getElementById("pilihan_sertifikat").addEventListener('change', function() {
             let currentValue = this.value
             let vaksin2_elements = document.querySelectorAll(".vaksin-2")
+            let vaksin1pilihan_element = document.querySelectorAll(".vaksinpilihan1")
+            
             if (currentValue == "single") {
                 vaksin2_elements.forEach(element => {
                     element.classList.add("hide")
-                });
+                })
+
+                vaksin1pilihan_element.forEach(element => {
+                    element.classList.remove("hide")
+                })
             }
             else {
                 vaksin2_elements.forEach(element => {
                     element.classList.remove("hide")
-                });
+                })
+                
+                vaksin1pilihan_element.forEach(element => {
+                    element.classList.add("hide")
+                })
             }
         })
 
