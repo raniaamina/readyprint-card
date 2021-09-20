@@ -1,0 +1,4 @@
+node_modules
+public/assets/img/certifs
+*.zip
+package-lock.json

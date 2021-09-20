@@ -1,0 +1,42 @@
+.input-line {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.main-card {
+  z-index: 10;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.overlay-img {
+  position: absolute;
+  top: 0;
+  /*left: 0;*/
+}
+
+.vaksin_1, .vaksin_2 {
+  position: relative;
+}
+
+.qrcode {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 9.1mm;
+  width: 9.1mm;
+  margin-top: 60.1px;
+  margin-left: 205px;
+}
+
+img.qrcode {
+  object-fit: fill;
+}
+
+.vaksin-2.hide {
+  display: none;
+}
+
+#templatenya {
+  display: none;
+}

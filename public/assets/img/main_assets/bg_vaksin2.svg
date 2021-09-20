@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg104331"
+   xml:space="preserve"
+   width="321.25983"
+   height="207.87402"
+   viewBox="0 0 321.25982 207.87403"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs104335"><linearGradient
+       id="linearGradient15564"><stop
+         style="stop-color:#f5ecee;stop-opacity:1"
+         offset="0"
+         id="stop15560" /><stop
+         style="stop-color:#faefeb;stop-opacity:1"
+         offset="1"
+         id="stop15562" /></linearGradient><clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath104729"><path
+         d="M 0,0 H 596 V 842 H 0 Z"
+         id="path104727" /></clipPath><linearGradient
+       xlink:href="#linearGradient15564"
+       id="linearGradient866"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-398.87909,172.40863)"
+       x1="-486.75"
+       y1="77.999977"
+       x2="-342"
+       y2="77.999977" /></defs><g
+     id="g104337"
+     transform="matrix(1.3333333,0,0,1.3333333,-920.60235,-253.33854)"
+     style="display:inline"><rect
+       style="display:inline;fill:url(#linearGradient866);fill-opacity:1;stroke-width:2.86078;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers fill stroke;stop-color:#000000"
+       id="bg_vaksin2"
+       width="240.94489"
+       height="155.90552"
+       x="-931.39667"
+       y="190.00391"
+       transform="scale(-1,1)" /></g></svg>

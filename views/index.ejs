@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>CardReadyTool</title>
+    <link rel="stylesheet" href="/public/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/assets/css/styles.css">
+</head>
+
+<body>
+    <div class="row input-line" id="templatenya">
+        <!-- <div class="col-xxl-1 card-option">
+            <select class="form-control" name="vaksinpilihan1">
+                <option value="cert" selected >Cert</option>
+                <option value="peta">Peta</option>
+            </select>
+        </div> -->
+        <div class="col align-self-center vaksin_1"><input type="file" name="vaksinfile1" class="form-control" accept="image/*"></div>
+        
+        <!-- <div class="col-xxl-1 card-option vaksin-2 hide">
+            <select class="form-control" name="vaksinpilihan2">
+                <option value="cert" selected >Cert</option>
+                <option value="peta">Peta</option>
+            </select>
+        </div> -->
+        <div class="col align-self-center vaksin-2 hide"><input type="file" name="vaksinfile2" class="form-control" accept="image/*"></div>
+    </div>
+    <form action="/submit-sertif" method="post" enctype="multipart/form-data">
+        <div class="container" style="min-height: 100vh;">
+            <div style="padding-top: 50px;">
+                <h1 class="text-center">Input Sertifikat Vaksin</h1>
+                <select class="px-5 w-100 py-3 form-control" name="pilihan_sertifikat" id="pilihan_sertifikat">
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                </select>
+                <div class="my-5">
+                    <div id="main-content"></div>
+                    <button class="btn btn-danger" type="button" id="tombolhapus" >Hapus</button>
+                    <button class="btn btn-info" type="button" id="tomboltambah" >Tambah</button>
+                    <!-- end line 1 -->
+                </div>
+                <button class="btn btn-danger btn-lg form-control" type="submit">Preview Result</button>
+            </div>
+        </div>
+    </form>
+    <script src="/public/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script defer>
+        let templatenya = document.getElementById("templatenya")
+        let maincontent = document.getElementById("main-content")
+        let elements_count = 0
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if ( elements_count == 0 ){
+                let first_content = templatenya.cloneNode(true)
+                first_content.id = "line-1"
+                maincontent.appendChild(first_content)
+                elements_count += 1
+            }
+        })
+
+        document.getElementById("pilihan_sertifikat").addEventListener('change', function() {
+            let currentValue = this.value
+            let vaksin2_elements = document.querySelectorAll(".vaksin-2")
+            if (currentValue == "single") {
+                vaksin2_elements.forEach(element => {
+                    element.classList.add("hide")
+                });
+            }
+            else {
+                vaksin2_elements.forEach(element => {
+                    element.classList.remove("hide")
+                });
+            }
+        })
+
+        document.getElementById("tomboltambah").addEventListener('click', function() {
+            if ( elements_count == 5 ) return
+            elements_count += 1
+            let new_child = templatenya.cloneNode(true)
+            new_child.id = `line-${elements_count}`
+            maincontent.appendChild(new_child)
+        })
+
+        document.getElementById("tombolhapus").addEventListener('click', function() {
+            if ( elements_count == 1 ) return
+            let last_node = document.getElementById(`line-${elements_count}`)
+            maincontent.removeChild(last_node)
+            elements_count -= 1
+        })
+
+    </script>
+</body>
+
+</html>
