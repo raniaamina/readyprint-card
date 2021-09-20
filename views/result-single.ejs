@@ -11,7 +11,6 @@
         @media print {
             @page {
                 size: 200mm 300mm;
-                orientation: portrait;
                 margin: 0;
             }
             html, body {
@@ -22,8 +21,8 @@
                 display: none;
             }
             .container{
-                padding: 3mm 10mm 0mm 10mm;
-                margin: 1mm;
+                /* padding: 3mm 10mm 0mm 10mm; */
+                margin-top: 4.5mm;
             }
             section {
                 padding: 0;
@@ -45,19 +44,22 @@
     <section>
         <div class="container">
             <div>
-                <button class="btn btn-danger btn-lg form-control" type="button" id="generatePDF">Generate PDF</button>
+                <div class="d-flex justify-content-center mt-4">
+                    <a class="btn btn-warning btn-lg w-25 mx-2" id="backBtn" href="/">Back</a>
+                    <button class="btn btn-danger btn-lg w-50 mx-2" type="button" id="generatePDF">Generate PDF</button>
+                </div>
                 <div class="my-5">
                     <% for(let i = 0; i < vaksinfile1.length; i++){ %>
-                    <div class="row d-xxl-flex justify-content-xxl-center input-line my-4" >
-                        <div class="col-xxl-4 align-self-center vaksin_1">
-                            <div class="d-xxl-flex justify-content-xxl-center">
+                    <div class="row d-flex justify-content-center input-line my-4" >
+                        <div class="col-4 align-self-center vaksin_1">
+                            <div class="d-flex justify-content-center">
                                 <% if (vaksinpilihan1[i] == 'vaksin1'){ %>
                                 <div class="main-card" style="width: 85mm;height: 55mm;background: url(&quot;/public/assets/img/main_assets/bg_vaksin1.svg&quot;) center / cover no-repeat;">
                                 <% } else { %>
                                 <div class="main-card" style="width: 85mm;height: 55mm;background: url(&quot;/public/assets/img/main_assets/bg_vaksin2.svg&quot;) center / cover no-repeat;">
                                 <% } %>
                                     <img src="/public/uploads/<%= vaksinfile1[i].filename %>" style="width: 85mm;height: 55mm;">
-                                    <div class="qrcode" style="background: url(&quot;/public/uploads/<%= vaksinfile1[i].filename %>&quot;) 71.2% 35% / 1140%, #9b1515;border-radius: 3px;"></div>
+                                    <div class="qrcode" style="background: url(&quot;/public/uploads/<%= vaksinfile1[i].filename %>&quot;) 71.2% 35% / 1140%, #9b1515;border-radius: 3px; margin-left: 205px !important"></div>
                                 </div>
                                 <div class="overlay-img" style="width: 85mm;height: 55mm;">
                                     <% if (vaksinpilihan1[i] == 'vaksin1'){ %>
