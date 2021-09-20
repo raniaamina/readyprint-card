@@ -36,7 +36,8 @@ app.post('/submit-sertif', upload.fields([{name: 'vaksinfile1', maxCount: 5}, {n
   const { pilihan_sertifikat } = req.body
   const { vaksinfile1, vaksinfile2 } = req.files
   if ( pilihan_sertifikat == "single" ){
-    res.render('result-single', {vaksinfile1})
+    const { vaksinpilihan1 } = req.body
+    res.render('result-single', {vaksinpilihan1, vaksinfile1})
   }
   else {
     res.render('result-double', {banyak_baris: vaksinfile1.length, vaksinfile1, vaksinfile2})
