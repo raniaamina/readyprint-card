@@ -36,7 +36,10 @@ app.post('/submit-sertif', upload.fields([{name: 'vaksinfile1', maxCount: 5}, {n
   const { pilihan_sertifikat } = req.body
   const { vaksinfile1, vaksinfile2 } = req.files
   if ( pilihan_sertifikat == "single" ){
-    const { vaksinpilihan1 } = req.body
+    let { vaksinpilihan1 } = req.body
+    if ( typeof(vaksinpilihan1) === "string" ) {
+      vaksinpilihan1 = [ vaksinpilihan1 ]
+    }
     res.render('result-single', {vaksinpilihan1, vaksinfile1})
   }
   else {
