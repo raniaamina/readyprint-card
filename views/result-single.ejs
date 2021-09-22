@@ -20,6 +20,13 @@
             button#generatePDF {
                 display: none;
             }
+            a#backBtn {
+                display: none;
+            }
+
+            div#gruptombol{
+                display: none;
+            }
             .container{
                 /* padding: 3mm 10mm 0mm 10mm; */
                 margin-top: 4.5mm;
@@ -28,9 +35,23 @@
                 padding: 0;
                 margin: 0;
             }
+            .row {
+                justify-content: center !important;
+                display: flex !important;
+            }
+
+            .beforeif {
+                justify-content: center !important;
+                display: flex !important;
+                margin-left: 1.1cm;
+            }
             .my-5 {
                 margin-top: 0mm !important;
                 margin-bottom: 0mm !important;
+            }
+            .aftercontainer {
+                justify-content: center !important;
+                display: flex !important;
             }
             .my-4 {
                 margin-top: 0mm !important;
@@ -44,7 +65,7 @@
     <section>
         <div class="container">
             <div>
-                <div class="d-flex justify-content-center mt-4">
+                <div class="aftercontainer d-flex justify-content-center mt-4">
                     <a class="btn btn-warning btn-lg w-25 mx-2" id="backBtn" href="/">Back</a>
                     <button class="btn btn-danger btn-lg w-50 mx-2" type="button" id="generatePDF">Generate PDF</button>
                 </div>
@@ -52,7 +73,7 @@
                     <% for(let i = 0; i < vaksinfile1.length; i++){ %>
                     <div class="row d-flex justify-content-center input-line my-4" >
                         <div class="col-4 align-self-center vaksin_1">
-                            <div class="d-flex justify-content-center">
+                            <div class="beforeif d-flex justify-content-center" >
                                 <% if (vaksinpilihan1[i] == 'vaksin1'){ %>
                                 <div class="main-card" style="width: 85mm;height: 55mm;background: url(&quot;/public/assets/img/main_assets/bg_vaksin1.svg&quot;) center / cover no-repeat;">
                                 <% } else { %>
@@ -84,7 +105,7 @@
             // cleanup
             // await fetch('/cleanup')
             // done
-            alert('Finished')
+            // alert('Finished')
             // redirect back
             // window.location = '/'
         })
