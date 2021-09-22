@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 
 // configs
-const PORT = 8000
+const PORT = 4800
 const UPLOAD_DIR = path.join(__dirname, 'public/uploads')
 
 // entrypoint
